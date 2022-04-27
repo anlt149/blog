@@ -180,7 +180,6 @@ ol {
 ul li,
 ol li {
   padding-left: var(--spacing-0);
-  margin-bottom: calc(var(--spacing-8) / 2);
 }
 
 li > p {
@@ -189,11 +188,6 @@ li > p {
 
 li *:last-child {
   margin-bottom: var(--spacing-0);
-}
-
-li > ul {
-  margin-left: var(--spacing-8);
-  margin-top: calc(var(--spacing-8) / 2);
 }
 
 blockquote {
@@ -228,15 +222,6 @@ table thead tr th {
 }
 
 /* Link */
-
-a {
-  color: var(--color-primary);
-}
-
-a:hover,
-a:focus {
-  text-decoration: none;
-}
 
 /* Custom classes */
 
@@ -329,5 +314,19 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+}
+
+.targetClass {
+  border-bottom: 0.25em solid #bdffec;
+}
+
+.animation-blink {
+  animation: blink 1.25s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }

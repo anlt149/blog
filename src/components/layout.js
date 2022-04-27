@@ -10,6 +10,7 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1 className="main-heading">
         <Link to="/">{title}</Link>
+        <span className="text-stone-500 animation-blink">|</span>
       </h1>
     )
   } else {
