@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/blog`,
   siteMetadata: {
     title: `everyday.log`,
     author: {
@@ -22,6 +23,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-offline`,
     `gatsby-plugin-image`,
     "gatsby-plugin-postcss",
     {
