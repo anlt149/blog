@@ -17,13 +17,11 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className="mb-8">
+          <h1 itemProp="headline" className="text-3xl">{post.frontmatter.date} - {post.frontmatter.title}</h1>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -83,7 +81,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY.MM.DD")
         description
       }
     }

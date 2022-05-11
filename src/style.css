@@ -103,7 +103,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-2) !important;
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
 }
@@ -118,13 +118,15 @@ h6 {
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
+  font-weight: var(--fontWeight-bold);
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
+  margin-bottom: var(--spacing-8)
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-3) !important;
+  font-weight: var(--fontWeight-semibold) !important;
 }
 
 h3 {
@@ -180,6 +182,7 @@ ol {
 ul li,
 ol li {
   padding-left: var(--spacing-0);
+  margin-bottom: calc(var(--spacing-8) / 2);
 }
 
 li > p {
@@ -188,6 +191,11 @@ li > p {
 
 li *:last-child {
   margin-bottom: var(--spacing-0);
+}
+
+li > ul {
+  margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2);
 }
 
 blockquote {
@@ -222,6 +230,15 @@ table thead tr th {
 }
 
 /* Link */
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
 
 /* Custom classes */
 
